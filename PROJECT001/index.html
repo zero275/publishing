@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>충남산림자원연구소</title>
+    <!-- 외부 스타일 시트 -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 폰트어썸 CDN -->
+    <script src="https://kit.fontawesome.com/f5c5e1a039.js" crossorigin="anonymous"></script>
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="jquery.mousewheel.min.js"></script>
+    
+    <!-- 파비콘설정 -->
+    <link rel="shortcut icon" href="img/pabicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/pabicon.png" type="image/x-icon">
+
+
+
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function () {
+            $('html,body').stop().animate({'scrollTop':0});
+
+            
+
+$('.topBtn').click(function(){
+    $('html,body').stop().animate({'scrollTop':'0'},800)
+});
+$('.qmenu ul li').eq(1).click(function(){
+    $('html,body').stop().animate({'scrollTop':'1152'},1000)
+});
+$('.qmenu ul li').eq(2).click(function(){
+    $('html,body').stop().animate({'scrollTop':'2289'})
+});
+
+$('.qmenu ul li').eq(3).click(function(){
+    $('html,body').stop().animate({'scrollTop':'3459'})
+});
+$('.qmenu ul li').eq(4).click(function(){
+    $('html,body').stop().animate({'scrollTop':'4735'})
+});
+
+$('.qmenu ul li').eq(5).click(function(){
+    $('html,body').stop().animate({'scrollTop':'5683'})
+});
+$('.qmenu ul li').eq(6).click(function(){
+    $('html,body').stop().animate({'scrollTop':'6679'})
+});
+            
+
+
+
+
+            $('.lan_title ul li').click(function () {
+                
+                
+                let ta = $(this).index();
+                let tx = ta+1;
+                console.log(ta);
+                
+
+                $('.lan_img ul li img').removeClass('on');
+                $('.lan_img ul li img').eq(ta).addClass('on');
+                $('.lan_title ul li').removeClass('on');
+                
+
+                
+                
+                $('.lan_title ul li:nth-child('+tx+')').addClass('on');
+                
+
+
+            });
+
+            let ta=0;
+            setInterval(function(){
+                if(ta<6)ta++;
+                if(ta==6)ta=0;
+                
+
+                $('.lan_title ul li').eq(ta).trigger('click');
+
+
+            },5000);
+
+
+
+
+
+            // 메뉴의 2뎁스 설정
+            $('.menu ul').mouseenter(function () {
+
+                 let ti = $(this).index()
+
+                
+
+                 $('.menu_2depth ul').addClass('on')
+             })
+             $('.menu_2depth p').click(function () {
+
+                  $('.menu_2depth ul').removeClass('on');
+             })
+
+            // 예약구간의 배경 설정
+
+            $('.res1_txt a').mouseenter(function () {
+                
+                
+                let i = $(this).index();
+                
+
+                $('.res_back ul li').removeClass('on');
+                $('.res_back ul li').eq(i).addClass('on');
+                
+
+
+            })
+            
+            let i=0;
+            setInterval(function(){
+                if(i<6)i++;
+                if(i==5)i=0;
+                
+
+                $('.res1_txt a').eq(i).trigger('mouseenter');
+
+
+            },3000)
+
+            $('.ev1-img ul li').mouseenter(function(){
+                let tl =$(this).index();
+                
+                $('')
+                $('.cilcle ul li a').css({'background-color':'#fff'});
+                $('.cilcle ul li a').eq(tl).css({'background-color':'#00A6DB'});
+
+            })
+
+            let tt = 0;
+            $('.cilcle ul li').mouseenter(function(){
+                    
+                let tv =$(this).index();
+
+                $('.cilcle ul li a').css({'background-color':'#fff'});
+                $('.cilcle ul li a').eq(tv).css({'background-color':'#00A6DB'});
+
+                $('.ev1-img ul li').removeClass('on');
+                $('.ev1-img ul li').eq(tv).addClass('on');
+                
+                })
+            
+            let te = 0;
+            setInterval(function(){
+                if(te<4)te++;
+                if(te==3)te=0;
+
+                $('.cilcle ul li').eq(te).trigger('mouseenter');
+
+
+
+            },4000);
+
+            
+            $('.p_txt ul li').mouseenter(function(){
+
+                let th = $(this).index();
+                $('.p_img ul').removeClass('on');
+                $('.p_img ul').eq(th).addClass('on');
+                $('.p_txt ul li').removeClass('on');
+                $('.p_txt ul li').eq(th).addClass('on');
+
+            });
+            
+
+            // 
+
+            
+            
+        });
+        
+
+
+
+        
+    </script>
+
+
+    <div class="box1">
+        <div>
+            <div class="lan_title">
+                <ul>
+                    <li class="on"><span>자연</span>이 있는 곳 <span>내가</span> 있어야 할 곳</li>
+                    <li>연차.쓸만합니다 </li>
+                    <li><span>자연</span> <span>평화</span> <span>그리고</span> <span>나</span></li>
+                    <li>어서오세요.</li>
+                </ul>
+            </div>
+            <div class="lan_img">   
+                <ul>
+                    <li><img class="on" src="img/back1.png" alt=""></li>
+                    <li><img src="img/back3.jpg" alt=""></li>
+                    <li><img src="img/back8.jpg" alt=""></li>
+                    <li><img src="img/back4.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+       <div class=" logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
+        <div class="util">
+            <ul class="utilbar">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+
+            <form class="search" action="">
+                <input type="search">
+                <input type="button" value="검색">
+            </form>
+        </div>
+        
+
+        <div class="topBtn"><a href="#">TOP</a></div>
+
+        <div class="menu">
+            <ul class="menu1">
+                <li><a href="#">산림자원연구소</a></li>
+                <li><a href="#">금강자연휴양림</a></li>
+                <li><a href="#">금강수목원</a></li>
+                <li><a href="#">산림박물관</a></li>
+                <li><a href="#">산림교육</a></li>
+                <li><a href="#">참여마당</a></li>
+            </ul>
+            <div class="menu_2depth">
+                <ul>
+                    <li><a href="#">연구소소개</a></li>
+                    <li><a href="#">연 혁</a></li>
+                    <li><a href="#">연 구 사 업</a></li>
+                    <li><a href="#">정보공유 자료실</a></li>
+
+                </ul>
+                <ul>
+                    <li><a href="#">휴양림소개</a></li>
+                    <li><a href="#">숙소안내</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">숙소/야영장 예약하기</a></li>
+
+                </ul>
+                <ul>
+                    <li><a href="#">수목원정보</a></li>
+                    <li><a href="#">무궁화동산</a></li>
+                    <li><a href="#">열대온실</a></li>
+                    <li><a href="#">동물마을</a></li>
+
+                </ul>
+                <ul>
+                    <li><a href="#">박물관소개</a></li>
+                    <li><a href="#">관람안내</a></li>
+                    <li><a href="#">전시실안내</a></li>
+
+
+                </ul>
+                <ul>
+                    <li><a href="#">자연학습 프로그램</a></li>
+                    <li><a href="#">숲해설 프로그램</a></li>
+                    <li><a href="#">목공예 체험</a></li>
+
+
+                </ul>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">묻고답하기</a></li>
+                    <li><a href="#">포토갤러리</a></li>
+                    <li><a href="#">유사기관사이트</a></li>
+                </ul>
+                <p>닫기</p>
+            </div>
+        </div>
+
+        <div class="qmenu">
+            <ul>
+                <li><span>▼</span> 메인페이지 구간별 빠른이동</li>
+                <li><a href="#">예약 | 요금안내</a></li>
+                <li><a href="#">이벤트 | 공지사항 | 안전센터</a></li>
+                <li><a href="#">시설배치도 | E카탈로그</a></li>
+                <li><a href="#">포토갤러리</a></li>
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">연구소소식</a></li>
+            </ul>
+        </div>
+
+        <div class="weather">
+            <div class="weather_1">
+                <p>날씨</p>
+                <p><img src="img/cloud1.png" alt=""></p>
+            </div>
+            <div class="weather_2">
+                <p>대전</p>
+                <p>구름약간 <br>
+                    21.5˚C</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+
+        <div class="reservation">
+            <div class="res_back">
+                <ul>
+                    <li><img src="img/res_img1-1.jpg" alt=""></li>
+                    <li><img src="img/res_img2.jpg" alt=""></li>
+                    <li><img src="img/res_img3.jpg" alt=""></li>
+                    <li><img src="img/res_img4.jpg" alt=""></li>
+                    <li><img src="img/res_img5.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="res1">
+                <img src="img/reservation1.png" alt="">
+            </div>
+
+
+
+            <div class="res1_txt">
+                <a href="#"><span></span> 캠핑장</a>
+                <a href="#"><span></span> 휴양림숙소</a>
+                <a href="#"><span></span> 자연학습 프로그램</a>
+                <a href="#"><span></span> 숲해설 프로그램</a>
+                <a href="#"><span></span> 목공예 체험</a>
+                <img src="img/explan.png" alt="">
+            </div>
+            <div class="res2">
+                <a href="#"><img class="ebutton" src="img/ebutton.png" alt=""></a>
+                <img class="res2_img" src="img/explan2.png" alt="">
+            </div>
+
+            <div class="coinfo">
+                <img src="img/coin1.png" alt="">
+            </div>
+            <div class="plus_1">
+                <a href="#"><img src="img/plus.png" alt=""></a>
+            </div>
+            <div class="cilcle0"><a href="#"><img src="img/oneone.png" alt=""></a></div>
+
+        </div>
+
+
+
+        <div class="eventbox">
+            <div class="ev_back"><img src="img/color_back3.jpg" alt=""></div>
+            <div class="ev1"><img src="img/event1-1.png" alt=""></div>
+            <div class="ev1-img">
+                <ul>
+                    <li><a href="#"><img src="img/eventimg1.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/event_img2-1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/event_img3.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="cilcle">
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="plus_2"><a href="#"><img src="img/plus.png" alt=""></a></div>
+            <div class="ev2"><img src="img/notice1-1.png" alt=""></div>
+            <div class="notice_menu">
+                <ul>
+                    <li><a href="#">금강자연휴양림 어린이물놀이장 개장에 대한 안내글</a></li>
+                    <li><a href="#">동물마을 관람 재개 알림</a></li>
+                    <li><a href="#">2022년 산불조심기간 외 산불전문예방진화대 모집공고</a></li>
+                </ul>
+            </div>
+            <div class="plus_3"><a href="#"><img src="img/plus.png" alt=""></a></div>
+            <div class="ev3"><img src="img/safety1-1.png" alt=""></div>
+            <div class="safety_menu">
+                <ul>
+                    <li><a href="#">여름 풀 숲 진드기 주의 안내</a></li>
+                    <li><a href="#">등산로 안전 수칙</a></li>
+
+                </ul>
+            </div>
+            <div class="plus_4"><a href="#"><img src="img/plus.png" alt=""></a></div>
+            <div class="cilcle1"><a href="#"><img src="img/oneone.png" alt=""></a></div>
+            <div class="cilcle2"><a href="#"><img src="img/oneone.png" alt=""></a></div>
+            <div class="cilcle3"><a href="#"><img src="img/oneone.png" alt=""></a></div>
+        </div>
+        <!-- <div class="img_info">
+            <div class="map">
+                <h3>시설 배치도</h3>
+                <p><a href="#"><img src="img/mapcilcle1.png" alt=""></a></p>
+            </div>
+            <div class="ecat">
+                <h3>E-카탈로그</h3>
+                <p><a href="#"><img src="img/catcilcle1.png" alt=""></a></p>
+            </div>
+
+        </div> -->
+        <div class="img_info2">
+            <div class="info_1">
+                <p><img src="img/wood-3775893_1920.jpg" alt=""></p>
+                <ul>
+                    <li>시설 배치도</li>
+                    <li><img src="img/minimap.jpg" alt=""></li>
+                    
+                </ul>
+            </div>
+            <div class="info_2">
+                <p><img src="img/wood-3775893_1920.jpg" alt=""></p>
+                <ul>
+                    <li>E-카탈로그</li>
+                    <li><img src="img/2020_catalogue.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="photo_g">
+            <div class="photo_g1"><img src="img/photo_g.png" alt="">
+            </div>
+            <div class="plus_5"> <a href="#"><img src="img/plus.png" alt=""></a>
+            </div>
+
+            <div class="p_txt">
+                <ul>
+                    <li class="on"><a href="#"><img src="img/photo_text1.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/photo_text2.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/photo_text3.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="p_img">
+                <ul class="on">
+                    <li><img src="img/photo1.png" alt=""></li>
+                    <li><img src="img/photo2.png" alt=""></li>
+                    <li><img src="img/photo3.png" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="img/photo4 (1).jpg" alt=""></li>
+                    <li><img src="img/photo4 (2).jpg" alt=""></li>
+                    <li><img src="img/photo4 (3).jpg" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="img/photo5 (1).jpg.png" alt=""></li>
+                    <li><img src="img/photo5 (2).jpg" alt=""></li>
+                    <li><img src="img/photo5 (3).jpg" alt=""></li>
+                </ul>
+            </div>
+            
+
+            <div class="cilcle4"><a href="#"><img src="img/oneone.png" alt=""></a></div>
+        </div>
+
+
+        <div class="directions">
+            <div class="way_1"><img src="img/way1-1.png" alt=""></div>
+            <div class="plus_6"><a href="#"><img src="img/plus.png" alt=""></a></div>
+            <div class="way_2"><img src="img/way2.png" alt=""></div>
+            <iframe class="g_map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6420.044325660322!2d127.23046704818785!3d36.43284679522002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ab5b94c686f4f%3A0xbe6049d2bd8829f3!2z6riI6rCV7J6Q7Jew7Zy07JaR66a8!5e0!3m2!1sko!2skr!4v1656384988151!5m2!1sko!2skr"
+                width="900" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="cilcle5"><a href="#"><img src="img/oneone.png" alt=""></a></div>
+        </div>
+
+
+
+        <div class="labnews">
+            <p>-2022.04.21 팔색조뉴스(김뜨듯기자)</p>
+            <p>자원봉사 및 기타문의</p>
+            <p>043-000-0000</p>
+            <p><i class="fa-solid fa-heart fa-beat"></i></p>
+            <div class="lab1">
+                <img src="img/lab1.png" alt="">
+            </div>
+            <div class="plus7">
+                <a href="#"><img src="img/plus.png" alt=""></a>
+            </div>
+            <div class="labimg1"><img src="img/lab2.png" alt=""></div>
+            <div class="labimg2"><img src="img/lab3.png" alt=""></div>
+
+            <div class="labbtn1"><a href="#"><img src="img/labbtn1.png" alt=""></a></div>
+            <div class="labbtn2"><a href="#"><img src="img/labbtn2.png" alt=""></a></div>
+
+            <div class="labtext1"><img src="img/labtext-1.png" alt=""></div>
+            <div class="labtext2"><img src="img/labtext-2.png" alt=""></div>
+            <div class="labtext3"><img src="img/labtext-3.png" alt=""></div>
+            <div class="cilcle6"><a href="#"><img src="img/oneone.png" alt=""></a></div>
+            
+        </div>
+
+    </div>
+
+    <div class="last_info">
+        <p><img src="img/treebottom.png" alt=""></p>
+        <p><img src="img/woodpeople.png" alt=""></p>
+        <!-- <p><img src="img/treetool.png" alt=""></p> -->
+        <ul class="info_1">
+            <li>충남산림자원연구소
+                소셜미디어</li>
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">twitter</a></li>
+        </ul>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer_img"><img src="img/footer.png" alt=""></div>
+    </div>
+
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+
+</html>
