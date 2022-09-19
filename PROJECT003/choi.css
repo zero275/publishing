@@ -1,0 +1,2416 @@
+@charset 'UTF-8';
+
+/* 폰트  */
+/* 함렛체 멋있는 명조체 */
+@font-face {
+    font-family: 'Hahmlet-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 교보손글씨-어바웃의 인포 */
+@font-face {
+    font-family: 'KyoboHandwriting2020A';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 카페24 아네모네 에어-쉬리 */
+@font-face {
+    font-family: 'Cafe24Ohsquareair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 추사사랑체 */
+@font-face {
+    font-family: 'ChusaLove';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* i saw 에 쓰인 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@font-face {
+    font-family: 'UhBeemysen';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'MYHaemalgeunSangsang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYHaemalgeunSangsang.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 카페24고운밤-최민식 프로필폰트 */
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 신라문화체-명량  */
+@font-face {
+    font-family: 'Shilla_CultureB-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MYHaemalgeunSangsang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYHaemalgeunSangsang.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 정신차렷체-올드보이 */
+@font-face {
+    font-family: 'EF_WAKEUP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_WAKEUP.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 필모그래피의 타이틀들 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+/* font-family: 'Playfair Display SC', serif; */
+
+/* 마포애민체-1뎁스 메뉴 폰트 */
+@font-face {
+    font-family: 'MapoAgape';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoAgapeA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    height: 1080px;
+    overflow: hidden;
+}
+
+/* 전체 사이즈 설정 */
+
+.choi {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 메인페이지 */
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 10;
+    background-color: #001233;
+    transition: all 1s;
+}
+
+.main div:nth-child(1) img {
+    position: absolute;
+    top: -200px;
+    right: 0px;
+}
+
+.main div:nth-child(2) img {
+    position: absolute;
+    top: 00px;
+    left: 0;
+}
+
+.main div:nth-child(3) img {
+    position: absolute;
+    top: -200px;
+    right: 50px;
+    transform: scale(1.2);
+}
+
+.main div:nth-child(4) {
+    position: absolute;
+    top: 0%;
+    left: 0;
+}
+
+.pAct {
+    width: 500px;
+    height: 400px;
+    font-size: 350px;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 270px;
+    left: -230px;
+    cursor: pointer;
+    transition: all 2s;
+    opacity: 0;
+}
+
+.pAct.on {
+    top: 270px;
+    left: 130px;
+    opacity: 1;
+}
+
+.pChoi {
+    width: 1500px;
+    font-size: 180px;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 650px;
+    left: 500px;
+    opacity: 0;
+    transition: all 2s;
+    cursor: pointer;
+}
+
+.pChoi.on {
+    top: 650px;
+    left: 300px;
+    opacity: 1;
+}
+
+/* 메뉴 */
+.menu {
+    position: fixed;
+    top: 70px;
+    left: 60px;
+    z-index: 20;
+}
+
+.menu ul {}
+
+.menu li {
+    line-height: 3;
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 140px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.menu li a {
+    font-size: 20px;
+    color: #fff;
+    font-family: 'MapoAgape';
+}
+
+.menu li span {
+    width: 0;
+    height: 20px;
+    background-color: #fff;
+    opacity: 0.2;
+    transform: skew(40deg);
+    position: absolute;
+    top: 50%;
+    transition: all 0.5s;
+}
+
+.menu li:hover span {
+    width: 100%;
+}
+
+.menu p {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    cursor: pointer;
+}
+
+.menu p i {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* 어바웃 페이지 */
+.about {
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c;
+    transform: scale(0);
+    position: absolute;
+    display: flex;
+    z-index: 5;
+    opacity: 0;
+    transition: all 0.7s 0s;
+}
+
+.about.on {
+    transform: scale(1);
+    opacity: 1;
+    transform-origin: center center;
+    position: absolute;
+    z-index: 15;
+}
+
+.ab_img {
+    width: 50%;
+    height: 100%;
+}
+
+.ab_img img {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+
+.ab-info {
+    position: absolute;
+    top: 200px;
+    right: 150px;
+    display: flex;
+    transition: all 0.7s;
+}
+
+.ab_black {
+    width: 10%;
+    height: 300px;
+    background-color: #1c1c1c;
+    margin-left: 300px;
+}
+
+.ab_black p {
+    font-size: 50px;
+    color: #fff;
+    margin-left: 100px;
+    margin-top: 55px;
+    font-family: 'Hahmlet-Bold';
+}
+
+.ab_box {
+    width: 70%;
+    height: 100%;
+    margin-left: 30px;
+}
+
+.ab_txt {
+    margin-top: 55px;
+    margin-left: 120px;
+}
+
+.ab_box p {
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: #fff;
+    line-height: 2;
+    margin-left: -70px;
+    font-family: 'Cafe24Oneprettynight';
+}
+
+.tmi-all {
+    position: absolute;
+    top: 930px;
+    right: -700px;
+    transition: all 0.5s 0.6s;
+}
+
+.tmi_w {
+    position: absolute;
+    width: 900px;
+    height: 500px;
+    bottom: -40px;
+    right: -150px;
+    transform: scale(1);
+}
+
+.tmi_w p {
+    cursor: pointer;
+}
+
+.tmi_w p:nth-child(1) {
+    width: 60px;
+    font-size: 60px;
+    position: absolute;
+    bottom: 300px;
+    right: 600px;
+    color: #dadada;
+}
+
+.tmi_w p:nth-child(2) {
+    width: 60px;
+    font-size: 30px;
+    position: absolute;
+    bottom: 480px;
+    right: 370px;
+    line-height: 1.2;
+    color: #808080;
+}
+
+.tmi_w p:nth-child(3) {
+    width: 160px;
+    font-size: 80px;
+    position: absolute;
+    bottom: 290px;
+    right: 440px;
+    color: #f1f1f1;
+}
+
+.tmi_w p:nth-child(4) {
+    width: 80px;
+    font-size: 80px;
+    line-height: 1.2;
+    position: absolute;
+    bottom: 200px;
+    right: 360px;
+    color: #656565;
+}
+
+.tmi_w p:nth-child(5) {
+    width: 320px;
+    font-size: 35px;
+    line-height: 1.2;
+    position: absolute;
+    bottom: 210px;
+    right: 390px;
+    color: #4d4d4d;
+}
+
+.tmi_w p:nth-child(6) {
+    width: 170px;
+    font-size: 41px;
+    line-height: 1.2;
+    position: absolute;
+    bottom: 470px;
+    right: 425px;
+    color: #f0f0f0;
+}
+
+.tmi_w p:nth-child(7) {
+    width: 120px;
+    font-size: 60px;
+    line-height: 1.2;
+    position: absolute;
+    bottom: 450px;
+    right: 600px;
+    color: #888;
+}
+
+.tmii {
+    width: 350px;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: right;
+    position: absolute;
+    bottom: 300px;
+    right: 0px;
+    padding-bottom: 10px;
+    color: #adb5bd;
+    padding-left: 00px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    z-index: 35;
+    transition: all 1s 0.2s;
+    animation: tmii 4s infinite;
+}
+
+@keyframes tmii {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    52% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tmii span {
+    display: inline-block;
+    transition: all 0.5s 0.5s;
+}
+
+.tmii span.on {
+    transform: rotate(180deg);
+}
+
+.box-0 {
+    width: 350px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    bottom: 300px;
+    z-index: 40;
+    display: none;
+    transition: all 0.6s 0.2s;
+    cursor: pointer;
+}
+
+/* tmi 설명구간 */
+.tmi_e {
+    position: absolute;
+    bottom: 300px;
+    right: 300px;
+    width: 10px;
+    height: 100px;
+    transform: scale(0.8);
+}
+
+.tmi_e p {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.tmi_e p:nth-child(1) {
+    bottom: 60px;
+    right: 270px;
+    width: 360px;
+    text-align: center;
+    height: auto;
+    color: #ced4da;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.tmi_e p:nth-child(2) {
+    bottom: 205px;
+    right: -360px;
+    width: 260px;
+    text-align: left;
+    height: auto;
+    color: #ced4da;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.tmi_e p:nth-child(3) {
+    bottom: 40px;
+    right: -250px;
+    width: 420px;
+    text-align: center;
+    height: auto;
+    color: #ced4da;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    z-index: 21;
+}
+
+.tmi_e p:nth-child(4) {
+    bottom: -240px;
+    right: -250px;
+    width: 370px;
+    text-align: center;
+    height: auto;
+    color: #ced4da;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.tmi_e p:nth-child(5) {
+    bottom: -110px;
+    right: 120px;
+    width: 200px;
+    text-align: center;
+    height: auto;
+    color: #ced4da;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.tmi_e p:nth-child(6) {
+    bottom: 40px;
+    right: -20px;
+    width: 200px;
+    text-align: center;
+    height: auto;
+    color: #ced4da;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.tmi_e p:nth-child(7) {
+    bottom: 130px;
+    right: 340px;
+    width: 430px;
+    text-align: center;
+    height: auto;
+    color: #ced4da;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.namu1 {}
+
+.namu1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #444;
+    position: absolute;
+    bottom: 60px;
+    right: 190px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.namu1 p:hover {
+    transform: scale(0.95);
+    color: rgb(233, 233, 233);
+}
+
+/* 필모그래피 구간 */
+
+.filmo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 00px;
+    left: 0;
+    opacity: 0;
+    z-index: 5;
+    perspective: 300px;
+    transition: all 1s 0s;
+    background-image: url(img/filmoback.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(0.9);
+    background-position: center center;
+}
+
+.tiger {
+    position: absolute;
+    bottom: 0;
+    left: -500px;
+    transition: all 1s 0s;
+    opacity: 0.5;
+    animation: tiger 20s 1s infinite;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes tiger {
+    0% {
+        bottom: 0;
+        left: -500px;
+        transform: scaleX(0.8);
+    }
+
+    100% {
+        bottom: 0;
+        left: 300px;
+        transform: translateY(20px) scaleX(1.3);
+    }
+}
+
+.man {
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    opacity: 0.5;
+    transition: all 0.5s 0s;
+    animation: man 20s 1s infinite;
+}
+
+@keyframes man {
+    0% {
+        bottom: 0;
+        right: -20px;
+        transform: scaleX(0.8);
+    }
+
+    100% {
+        bottom: 0;
+        right: -20px;
+        transform: translateY(20px) scaleX(1.3);
+    }
+}
+
+
+
+.filmo.on {
+    top: 0;
+    left: 0;
+    z-index: 15;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fil_box {
+    width: 100%;
+    height: 100%;
+}
+
+.fil_1 {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 22;
+}
+
+.fil_1>div {
+    width: 32.3333%;
+    height: 100%;
+    display: flex;
+    margin-right: 1%;
+    box-sizing: border-box;
+    background-image: url(img/she_back_img.png);
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    transform: translateY(0%);
+    cursor: pointer;
+    transition: all 0.5s;
+    color: #fff;
+    /* font-family: 'KyoboHandwriting2020A'; */
+    font-family: 'Playfair Display SC', serif;
+}
+.fil_1>div.on {height:40px;
+    font-size:20px;}
+
+.fil_1>div:hover {
+    opacity: 0.8;
+    color: rgb(156, 15, 15);
+}
+
+.fil_2 {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.fil_2>div {
+    width: 32.3333%;
+    height: 96%;
+
+    margin-right: 1%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%);
+    transition: all 0.5s;
+    color: #fff;
+}
+.fil_2>div.on {transform: translateY(40px) rotateY(360deg);
+             z-index:23;}
+
+.fil_2>div>ul,
+.theater>ul {
+    width: 75%;
+    height: 45px;
+    margin-bottom: -2px;
+    margin-top: 20px;
+    display: flex;
+    margin-left: 50px;
+    justify-content: left;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+    padding-left: 20px;
+    font-family: 'Cafe24Oneprettynight';
+}
+
+.fil_2>div:nth-child(3)>ul {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+.fil_2>div>ul:hover {
+    border-left: 10px solid #fff;
+
+    transition: all 0.5s;
+}
+
+.theater>ul:hover {
+    border-left: 10px solid #fff;
+
+    transition: all 0.5s;
+
+}
+
+.fil_2>div>ul>li:nth-child(1),
+.theater>ul>li:nth-child(1) {
+    margin-right: 40px;
+}
+
+
+.theater {
+    margin-top: 40px;
+}
+
+/* 대표작 구간 */
+
+.master {
+    width: 100%;
+    height: 25000px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 5;
+    opacity: 0;
+    transition: all 0.7s 0s;
+    perspective: 40000px;
+}
+
+/* 작품1 쉬리 */
+.ma1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    background-image: url(img/she_back_img.png);
+    background-size: cover;
+    transition: all 2s;
+    transform: translateZ(0px);
+    overflow: hidden;
+    z-index: 31;
+}
+
+.cha_txt {
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+    transition: all 3s 1s;
+    opacity: 0;
+}
+
+
+.ma1.on {
+    transform: translateZ(0px);
+    opacity: 1;
+}
+
+.she_img {
+    width: 1500px;
+    height: 1500px;
+    border-radius: 50%;
+    position: absolute;
+    top: -300px;
+    right: -550px;
+    overflow: hidden;
+}
+
+.she_img.on .she_1 {
+    width: 1500px;
+    height: 8000px;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    animation: she1 50s linear infinite;
+}
+
+.she_1 img {
+    width: 1700px;
+    height: auto;
+
+}
+
+@keyframes she1 {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: -3402px;
+    }
+
+    50.0001% {
+        top: 3402px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+.she_img.on .she_2 {
+    width: 1500px;
+    height: 8000px;
+    position: absolute;
+    top: -3402px;
+    left: -100px;
+    animation: she2 50s linear infinite;
+}
+
+.she_2 img {
+    width: 1700px;
+    height: auto;
+}
+
+@keyframes she2 {
+    0% {
+        top: 3402px;
+    }
+
+    50% {
+        top: 0px;
+    }
+
+    100% {
+        top: -3402px;
+    }
+}
+
+
+.ma1 p:nth-child(1) {
+    font-size: 400px;
+    font-family: 'Cafe24Ohsquareair';
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: -50px;
+    left: 800px;
+    opacity: 0;
+    transition: all 3s 0.5s;
+}
+
+.ma1 p.on:nth-child(1) {
+    bottom: -50px;
+    left: 270px;
+    opacity: 1;
+}
+
+.ma1 p:nth-child(2) {
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    opacity: 0;
+    transition: all 3s 0.5s;
+}
+
+.ma1 p.on:nth-child(2) {
+    bottom: -50px;
+    left: 570px;
+    opacity: 1;
+}
+
+.ma1 p:nth-child(3) {
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -100px;
+    left: 300px;
+    opacity: 0;
+    transition: all 3s 0.5s;
+}
+
+.ma1 p.on:nth-child(3) {
+    top: 200px;
+    left: 300px;
+    opacity: 1;
+}
+
+.ma1 p:nth-child(2) span {
+    width: 120px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+    color: #fff;
+    opacity: 0.3;
+    position: absolute;
+    top: 40px;
+    left: -130px;
+    cursor: pointer;
+    transition: all 1s;
+    font-size: 15px;
+
+}
+
+.ma1 p:nth-child(2) span:hover {
+    opacity: 0.8;
+}
+
+
+/* 작품2 올드보이*/
+.ma2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateZ(-5000px);
+    opacity: 0;
+    transition: all 3s;
+    background-image: url(img/old_back.png);
+    background-size: cover;
+    z-index: 32;
+}
+
+.ma2 img:nth-child(1) {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0;
+    right: -70px;
+    opacity: 1;
+    transition: all 1s 3s;
+}
+
+.ma2.on img:nth-child(1) {
+    opacity: 0;
+}
+
+.ma2 img:nth-child(2) {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 40px;
+    right: 900px;
+    transition: opacity 4s 3.3s;
+    transform: scale(1) rotateY(180deg);
+    opacity: 0;
+}
+
+.ma2.on img:nth-child(2) {
+    opacity: 1;
+}
+
+.ma2.on {
+    transform: translateZ(0px);
+    opacity: 1;
+}
+
+.ma2_txt {}
+
+.ma2_txt p {
+    position: absolute;
+}
+
+.ma2_txt p:nth-child(1) {
+    font-size: 80px;
+    top: 10px;
+    right: 130px;
+    color: #fff;
+}
+
+.ma2_txt p:nth-child(2) {
+    font-size: 60px;
+    color: rgb(195, 26, 26);
+    top: 340px;
+    right: -100px;
+    font-weight: bold;
+    transform: rotate(90deg);
+
+}
+
+.ma2_txt p:nth-child(3) {
+    font-size: 35px;
+    top: 710px;
+    left: 1000px;
+    color: #fff;
+    text-align: right;
+    font-family: 'EF_WAKEUP';
+    letter-spacing: 5px;
+    line-height: 50px;
+    transition: all 1s 3s;
+}
+
+.ma2.on .ma2_txt p:nth-child(3) {
+    opacity: 0;
+}
+
+.ma2_txt p:nth-child(4) {
+    font-size: 300px;
+    bottom: -10px;
+    left: 0px;
+    line-height: 1.1;
+    opacity: 0.15;
+    color: #fff;
+    transition: all 1s 6s;
+}
+.ma2.on .ma2_txt p:nth-child(4){color: red;
+opacity: 0.5;
+transform: translateX(1100px) translateY(-70px);}
+
+
+.ma2_txt p:nth-child(5) {
+    font-size: 35px;
+    top: 540px;
+    left: 550px;
+    color: #fff;
+    text-align: right;
+    font-family: 'EF_WAKEUP';
+    letter-spacing: 5px;
+    line-height: 50px;
+    transition: all 2s 3.7s;
+    opacity: 0;
+}
+
+.ma2.on .ma2_txt p:nth-child(5) {
+    opacity: 1;
+}
+
+
+.reading {
+    position: absolute;
+    width: 300px;
+    top: 30px;
+    left: 350px;
+    cursor: pointer;
+}
+
+.reading i {
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+}
+
+.reading i:nth-child(1) {
+    display: flex;
+    top: -70px;
+    left: 0;
+    transition: all 0.5s;
+    animation: ma2-1 1.5s infinite;
+}
+
+@keyframes ma2-1 {
+    0% {
+        top: -10px;
+        left: 0;
+    }
+
+    100% {
+        top: 20px;
+        left: 0;
+        opacity: 0;
+    }
+}
+
+.reading.on i {
+    display: none;
+}
+
+
+.reading p {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+   
+    letter-spacing: 15px;
+}
+
+
+.reading video {
+    position: absolute;
+    top: 00px;
+    left: 70px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.reading.on video {
+    opacity: 1;
+    top: 40px;
+}
+
+
+/* 3번째작품 악마를 보았다 */
+.ma3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateZ(-10000px);
+    opacity: 0;
+    transition: all 2s;
+    background-image: url(img/devil_back.png);
+    background-size: cover;
+    z-index: 31;
+
+}
+
+.ma3 img:nth-child(1) {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0;
+    right: 50%;
+    margin-right: -300px;
+}
+
+.ma3 img:nth-child(2) {
+    position: absolute;
+    top: -100px;
+    left: 300px;
+    opacity: 0.4;
+}
+
+.ma3.on {
+    transform: translateZ(0px);
+    opacity: 1;
+}
+
+.ma3_txt {
+    width: 100%;
+    height: 100%;
+}
+
+.ma3_txt p {
+    position: absolute;
+}
+
+.ma3_txt p:nth-child(1) {
+    font-size: 220px;
+    color: rgba(255, 34, 34, 0.2);
+    top: -30px;
+    right: 60px;
+    text-align: right;
+    line-height: 0.95;
+    opacity: 1;
+    font-family: 'UhBeemysen';
+    transition: all 2s;
+    
+}
+.ma3.on .ma3_txt p:nth-child(1){
+    animation: ma3_txt 10s;
+    
+}
+@keyframes ma3_txt {
+    0%{letter-spacing: -50px;
+        color: rgba(255, 92, 92, 0.2);}
+    100%{letter-spacing: 30px;
+    color: rgba(225, 57, 57, 0.3);}
+}
+
+.ma3_txt p:nth-child(2) {
+    font-size: 80px;
+    bottom: 200px;
+    right: 490px;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'MYHaemalgeunSangsang';
+}
+
+.ma3_txt p:nth-child(3) {
+    font-size: 80px;
+    bottom: 100px;
+    right: 60px;
+    color: rgba(255, 255, 255, 0.15);
+    font-family: 'MYHaemalgeunSangsang';
+}
+
+.ma3_txt p:nth-child(4) {
+    font-size: 40px;
+}
+
+.beBtn {
+    font-size: 70px;
+    position: absolute;
+    top: 0;
+    left: 290px;
+    font-family: 'MYHaemalgeunSangsang';
+    cursor: pointer;
+    
+}
+.beBtn:hover {transform: scale(5);
+    font-family: 'UhBeemysen';
+}
+.beBtn.on {transition: all 1.5s;
+    animation: beBtn 7s infinite;
+    transform-origin: left center;}
+
+
+
+    @keyframes beBtn {
+        0%{letter-spacing: 5px;
+            color: rgb(0, 0, 0);}
+        100%{letter-spacing: 15px;
+            color: rgb(171, 33, 33);}
+    }
+
+.behind {
+    width: 920px;
+    height: 330px;
+    background-color: #000;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    transition: all 1.5s;
+    opacity: 0;
+}
+
+.behind.on {
+    width: 920px;
+    opacity: 1;
+}
+
+.behind:hover {
+    transform: translateX(-300);
+}
+
+.be_inner {}
+
+.be_inner ul {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    list-style-type: circle;
+}
+
+.be_inner ul li {
+    color: #fff;
+    line-height: 2.8;
+    opacity: 0;
+    transition: all 0.8s 0.2s;
+}
+
+.behind.on .be_inner ul li {
+    opacity: 1;
+}
+
+/* 작품4 범죄와의 전쟁 */
+.ma4 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateZ(-15000px);
+    opacity: 0;
+    transition: all 2s;
+    background-image: url(img/backtothe.jpg);
+    background-size: cover;
+    overflow: hidden;
+    z-index: 31;
+    transform: translateX(30px);
+}
+
+.ma4_btn {
+    width: 900px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 30%;
+    margin-left: -200px;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+}
+
+.ma4_left {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    left: 740px;
+    z-index: 31;
+    opacity: 0;
+    transition: all 2s 0.8s;
+}
+
+.ma4_left i {
+    font-size: 80px;
+    color: #fff;
+    opacity: 0.7;
+    cursor: pointer;
+
+}
+
+.ma4_right {
+    position: absolute;
+    top: 300px;
+    left: 450px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    transition: all 2s 0.8s;
+}
+
+.ma4_right i {
+    font-size: 80px;
+    color: #fff;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+.ma4 img {
+    position: absolute;
+}
+
+.ma4 img:nth-child(1) {
+    width: auto;
+    height: 100%;
+    top: 0;
+    left: -150px;
+    margin-right: -300px;
+}
+
+.ma4.on {
+    transform: translateZ(0px);
+    opacity: 1;
+}
+
+.criminal {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(101, 82, 0);
+    top: 0;
+    left: 0;
+    transition: all 2s;
+}
+
+.criminal.on {
+    transform: translateX(1150px);
+    background-color: rgb(0, 0, 0);
+}
+
+.crim_1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    opacity: 1;
+    perspective: 1500px;
+    transition: all 1s 0.5s;
+}
+
+.criminal.on .crim_1 {
+    opacity: 0;
+}
+
+.crim_1 img {
+    transform: rotateX(-90deg);
+    transition: all 1s;
+    transform-origin: center bottom;
+}
+
+.crim_1.on img {
+    transform: rotateX(0deg);
+}
+
+.crim_1 p {
+    font-size: 70px;
+    color: #fff;
+    width: 500px;
+    position: absolute;
+    top: 500px;
+    left: 1000px;
+    transition: all 2s;
+    opacity: 0;
+    font-family: 'MYHaemalgeunSangsang';
+}
+
+.crim_1.on p {
+    top: 500px;
+    left: 700px;
+    opacity: 1;
+}
+
+.crim_2 {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    transition: all 1s 0.5s;
+}
+
+.criminal.on .crim_2 {
+    opacity: 1;
+    z-index: 30;
+    top: 0;
+    left: 0;
+}
+
+
+.crim_2 img {}
+
+.crim_2 p {
+    font-size: 50px;
+    color: #fff;
+    width: 900px;
+    position: absolute;
+    top: 550px;
+    text-align: right;
+    left: -500px;
+    font-family: 'MYHaemalgeunSangsang';
+}
+
+.crim_3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 280px;
+    right: -1000px;
+    transition: all 2s;
+
+}
+
+.crim_3.on {
+    right: -200px;
+}
+
+.crim_3 img {
+    transform: scale(0.6);
+    position: absolute;
+    top: 00px;
+    right: 0;
+
+    transition: all 15s;
+}
+
+.crim_3 img.on {
+    transform: scale(0.65);
+}
+
+.ma4_txt {
+    width: 100%;
+    height: 100%;
+}
+
+.ma4_txt p:nth-child(1) {
+    width: 11500px;
+    height: 70px;
+    text-align: left;
+    font-size: 30px;
+    position: absolute;
+    bottom: -15px;
+    right: -11500px;
+    color: #fff;
+    transition: all 0.2s;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    padding-top: 5px;
+    box-sizing: border-box;
+
+}
+
+.ma4_txt p.on {
+    animation: p2012 130s linear infinite;
+
+
+}
+
+.ma4_txt p:hover {
+    animation-play-state: paused;
+}
+
+@keyframes p2012 {
+    0% {
+        bottom: -15px;
+        right: -11500px;
+        color: rgb(255, 109, 109)
+    }
+
+    99.999% {
+        bottom: -15px;
+        right: 11500px;
+        color: #000
+    }
+
+    100% {
+        bottom: -15px;
+        right: -500px;
+        color: #fff
+    }
+}
+
+
+
+
+
+
+
+/* 작품5 명량 */
+.ma5 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateZ(-20000px);
+    opacity: 0;
+    transition: all 2s;
+    background-size: cover;
+    z-index: 32;
+    overflow: hidden;
+}
+
+
+
+.ma5.on {
+    transform: translateZ(0px);
+    opacity: 1;
+}
+
+.ma5_lee {
+    width: 40%;
+    height: 100%;
+
+}
+
+.ma5_lee>div {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    opacity: 1;
+}
+
+.ma5_lee div:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/lee_1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 31;
+}
+
+.ma5_lending {
+    z-index: 32;
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+}
+
+.ma5_lending p {
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* 배경이미지 설정구간 */
+.img_inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+}
+
+.b_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9600px;
+    height: 100%;
+    display: flex;
+
+    animation: mb1 100s 1s linear infinite;
+}
+
+.b_1:hover div img {
+    animation-play-state: paused;
+}
+
+.b_1 div img {
+    height: 100%;
+    width: 1920px
+}
+
+
+@keyframes mb1 {
+    0% {
+        left: 0%;
+    }
+
+    50% {
+        left: -9600px
+    }
+
+    50.000001% {
+        left: 9600px;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+.b_1>div {
+    width: 100%;
+}
+
+.b_1 div:nth-child(1) {}
+
+.b_1 div:nth-child(2) {}
+
+.b_1 div:nth-child(3) {}
+
+.b_1 div:nth-child(4) {}
+
+.b_1 div:nth-child(5) {}
+
+
+
+
+
+/* -------------------------명량 첫번째구간 배경이미지끝 */
+
+.b_2 {
+    position: absolute;
+    top: 0;
+    left: -9600px;
+    width: 9600px;
+    height: 100%;
+    display: flex;
+
+    animation: mb2 100s 1s linear infinite;
+}
+
+.b_2 div img {
+    height: 100%;
+    width: 1920px
+}
+
+
+@keyframes mb2 {
+    0% {
+        left: 9600px;
+    }
+
+    50% {
+        left: 0px
+    }
+
+
+    100% {
+        left: -9600px;
+    }
+}
+
+
+.b_2>div {
+    width: 100%;
+}
+
+.b_2 div:nth-child(1) {}
+
+.b_2 div:nth-child(2) {}
+
+.b_2 div:nth-child(3) {}
+
+.b_2 div:nth-child(4) {}
+
+.b_2 div:nth-child(5) {}
+
+/* 명량 두번째 배경이미지 구간 끝 */
+
+
+.ma5_txt {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    z-index: 20;
+}
+
+.ma5_txt h2 {
+    width: 900px;
+    position: absolute;
+    top: 400px;
+    right: 100px;
+    font-size: 50px;
+    color: #fff;
+    font-family: 'Shilla_CultureB-Bold';
+    line-height: 1.3;
+}
+
+.ma5_txt p {
+    width: 300px;
+    height: 300px;
+}
+
+.ma5_txt p img {
+    width: 200px;
+    height: 200px;
+    margin-top: 70px;
+    transform: scale(1.5);
+}
+
+
+
+
+
+
+
+
+
+.master.on {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 15;
+}
+
+.master>div {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.dot {
+    width: 200px;
+    height: 100px;
+    z-index: 20;
+    position: absolute;
+    top: 500px;
+    left: 70px;
+    opacity: 0;
+}
+
+.dot.on {
+    opacity: 1;
+}
+
+.dot ul {}
+
+.dot li {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.dot li span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    margin: 0px -1px 1px 3px;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+
+.dot li span:hover {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.dot li span.on {
+    background-color: #023e8a;
+}
+
+.dot li:nth-child(1) span p {
+    width: 50px;
+    height: 30px;
+    text-align: left;
+    color: rgb(163, 163, 163);
+    font-size: 22px;
+    position: absolute;
+    top: 5px;
+    left: 70px;
+    transition: all 4s 2s;
+    display: none;
+}
+
+.dot li:nth-child(1) span:hover p {
+    display: block;
+    transition: all 1s 2s;
+}
+
+.dot li:nth-child(2) span p {
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    color: rgb(163, 163, 163);
+    font-size: 22px;
+    position: absolute;
+    top: 55px;
+    left: 50px;
+    transition: all 4s 2s;
+    display: none;
+}
+
+.dot li:nth-child(2) span:hover p {
+    display: block;
+    transition: all 1s 2s;
+}
+
+.dot li:nth-child(3) span p {
+    width: 150px;
+    height: 30px;
+    text-align: left;
+    color: rgb(163, 163, 163);
+    font-size: 22px;
+    position: absolute;
+    top: 105px;
+    left: 30px;
+    transition: all 4s 2s;
+    display: none;
+}
+
+.dot li:nth-child(3) span:hover p {
+    display: block;
+    transition: all 1s 2s;
+}
+
+.dot li:nth-child(4) span p {
+    width: 150px;
+    height: 30px;
+    text-align: left;
+    color: rgb(163, 163, 163);
+    font-size: 22px;
+    position: absolute;
+    top: 155px;
+    left: 30px;
+    transition: all 4s 2s;
+    display: none;
+}
+
+.dot li:nth-child(4) span:hover p {
+    display: block;
+    transition: all 1s 2s;
+}
+
+.dot li:nth-child(5) span p {
+    width: 150px;
+    height: 30px;
+    text-align: left;
+    color: rgb(163, 163, 163);
+    font-size: 22px;
+    position: absolute;
+    top: 205px;
+    left: 70px;
+    transition: all 4s 2s;
+    display: none;
+}
+
+.dot li:nth-child(5) span:hover p {
+    display: block;
+    transition: all 1s 2s;
+}
+
+
+
+/* 인간최민식 구간 */
+.human {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    opacity: 0;
+    z-index: 5;
+    transition: all 2s 0s;
+    background-image: url(img/h_back.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.human.on {
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 15;
+}
+
+.h_back1 {
+    position: absolute;
+    bottom: -300px;
+    left: 0;
+    z-index: 20;
+}
+
+.human_inner {
+    position: absolute;
+    top: 50px;
+    right: 1800px;
+}
+
+.h_txt {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+}
+
+.h_txt p:nth-child(1) {
+    font-size: 120px;
+    position: absolute;
+    top: -320px;
+    left: 0;
+    opacity: 0.3;
+}
+
+.h_txt p:nth-child(2) {
+    font-size: 170px;
+    position: absolute;
+    width: 600px;
+    top: -30px;
+    left: 130px;
+    opacity: 0.3;
+}
+
+.h_txt p:nth-child(3) {
+    font-size: 30px;
+    position: absolute;
+    width: 600px;
+    top: -180px;
+    left: 780px;
+    color: #fff;
+    font-family: 'MYHaemalgeunSangsang';
+    opacity: 0.8;
+}
+
+.h_txt p:nth-child(4) {
+    font-size: 30px;
+    position: absolute;
+    width: 480px;
+    top: -296px;
+    left: 680px;
+    color: #fff;
+    opacity: 0.5;
+    border-top: 1px dotted #ffffff;
+    text-align: right;
+}
+
+.h_txt p:nth-child(5) {
+    font-size: 30px;
+    position: absolute;
+    width: 480px;
+    top: 225px;
+    left: 150px;
+    padding-bottom: 5px;
+    color: #fff;
+    opacity: 0.5;
+    border-bottom: 1px dotted #ffffff;
+}
+
+.hv {}
+
+.hv video:nth-child(1) {
+    position: absolute;
+    top: 100px;
+    left: 550px;
+}
+
+.hv video:nth-child(2) {
+    position: absolute;
+    top: 380px;
+    left: 1050px;
+}
+
+.talk {
+    position: absolute;
+    bottom: 70px;
+    left: 560px;
+    font-size: 40px;
+    font-family: 'MYHaemalgeunSangsang';
+    color: #fff;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+
+/* 갤러리 구건 */
+.gall {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.7) skew(40deg);
+    opacity: 0;
+    z-index: 5;
+    transition: all 2s 0s;
+    transform-origin: center center;
+    /* background-color: slategray; */
+    background-color: #000;
+}
+
+.gall.on {
+    top: 0;
+    left: 0;
+    transform: scale(1) skew(0deg);
+    opacity: 1;
+    z-index: 15;
+}
+
+.gall .gall_001 {
+    width: 25%;
+    height: 30%;
+    background-color: #1c1c1c;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 4s 1s;
+}
+
+.gall.on .gall_001 {
+    animation: img1 2s 1s;
+    animation-fill-mode: forwards;
+    transition: all 0.5s 1s;
+}
+
+.gall div:nth-child(1):hover {}
+
+.gall .gall_001>img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes img1 {
+    0% {
+        width: 25%;
+        height: 30%;
+        bottom: 0;
+        right: 0;
+    }
+
+    30% {
+        width: 25%;
+        height: 30%;
+        bottom: 30%;
+        right: 0;
+    }
+
+    70% {
+        width: 50%;
+        height: 30%;
+        bottom: 30%;
+        right: 0;
+    }
+
+    100% {
+        width: 50%;
+        height: 70%;
+        bottom: 30%;
+        right: 0;
+    }
+}
+
+.gall div:nth-child(2) {
+    width: 25%;
+    height: 30%;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 1s;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'MYHaemalgeunSangsang';
+}
+.gall div:nth-child(2):hover {font-size: 50px;}
+.gall div:nth-child(2) p{font-size: 50px;
+transition: all 5s;}
+.gall div:nth-child(2):hover p{font-size: 52px;}
+
+.gall div:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+}
+
+.gall div:nth-child(2) p {
+    font-size: 40px;
+    text-align: center;
+}
+
+.gall div:nth-child(3) {
+    width: 25%;
+    height: 30%;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 1s 3.3s;
+    z-index: 20;
+}
+
+.gall.on div:nth-child(3) {
+    bottom: 0;
+    right: 25%;
+}
+
+.gall.on div:nth-child(3) video {
+    width: 100%;
+    height: 100%;
+}
+
+/* 갤러리 슬라이드 */
+.gall div:nth-child(4) {
+    width: 25%;
+    height: 30%;
+    background-color: #7e2fd7;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    border-right: 15px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+
+}
+
+.gall.on div:nth-child(4) {
+    animation: img4 1.6s 1.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes img4 {
+    0% {
+        width: 25%;
+        height: 30%;
+        bottom: 0;
+        right: 0;
+    }
+
+    50% {
+        width: 25%;
+        height: 30%;
+        bottom: 0;
+        right: 25%;
+    }
+
+    100% {
+        width: 50%;
+        height: 50%;
+        bottom: 0;
+        right: 50%;
+
+    }
+}
+
+.gall.on div:nth-child(4) .gall_img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5769px;
+    height: 100%;
+}
+
+@keyframes gImg1 {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -5769px;
+    }
+
+    50.0001% {
+        left: 5769px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.gall.on div:nth-child(4) .gall_img1 {
+    animation: gImg1 70s linear infinite;
+}
+
+.gall.on div:nth-child(4):hover .gall_img1 {
+    animation-play-state: paused;
+}
+
+.gall.on div:nth-child(4) .gall_img2 {
+    position: absolute;
+    top: 0;
+    left: 5769px;
+    width: 5769px;
+    height: 100%;
+}
+
+@keyframes gImg2 {
+    0% {
+        left: 5769px;
+    }
+
+    50% {
+        left: 0px;
+    }
+
+    100% {
+        left: -5769px;
+    }
+}
+
+.gall.on div:nth-child(4) .gall_img2 {
+    animation: gImg2 70s linear infinite;
+}
+
+.gall.on div:nth-child(4):hover .gall_img2 {
+    animation-play-state: paused;
+}
+
+
+.gall div:nth-child(5) {
+    width: 25%;
+    height: 30%;
+    background-color: #fff53a;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
+}
+
+.gall div:nth-child(5) img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.gall.on div:nth-child(5) {
+    animation: img5 3s 2.4s;
+    transition: all 3s 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes img5 {
+    0% {
+        width: 25%;
+        height: 30%;
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+    }
+
+    30% {
+        width: 25%;
+        height: 30%;
+        bottom: 0;
+        right: 25%;
+        opacity: 1;
+    }
+
+    70% {
+        width: 25%;
+        height: 30%;
+        bottom: 51%;
+        right: 50.7%;
+        opacity: 1;
+    }
+
+    100% {
+        width: 25%;
+        height: 40%;
+        bottom: 51%;
+        right: 50.7%;
+    }
+}
+
+.gall_txt {
+    font-size: 70px;
+    color: #fff;
+    width: 50px;
+    position: absolute;
+    top: 100px;
+    left: 470px;
+    z-index: 21;
+    opacity: 0;
+    transition: all 2s 5.5s;
+    font-family: 'Shilla_CultureB-Bold';
+    letter-spacing: 20px;
+}
+
+.gall.on .gall_txt {
+    width: 70px;
+    font-size: 70px;
+    top: 180px;
+    left: 350px;
+    opacity: 1;
+    letter-spacing: 50px;
+}
+
+.young {
+    width: 25%;
+    height: 70%;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: #000000;
+    transition: all 1s;
+    transform-origin: center top;
+    opacity: 0;
+    z-index: 30;
+}
+.young.on {
+   
+top: 0;
+opacity: 1;}
+
+.y_inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.y_inner>img {margin-left: 100px;
+    width: 300px;
+    height: 33.3333%;
+}
+.y_inner>img:hover {transform: scale(2);
+transition: all 0.5s;
+transform-origin: right bottom;}
+
+.y_inner>img:nth-child(1):hover {transform-origin: right top;}
